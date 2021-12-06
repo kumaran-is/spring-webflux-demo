@@ -10,7 +10,7 @@ public class MonoFluxTest {
     @Test
     public void testMono(){
         Mono<?> monoString = Mono.just("springwebfux")
-           //     .then(Mono.error(new RuntimeException("Some Exception")))
+        	//	.then(Mono.error(new RuntimeException("Some Exception")))
                 .log();
         monoString.subscribe(System.out::println,(e)->System.out.println(e.getMessage()));
     }
